@@ -1,7 +1,7 @@
 # Anomaly_detection_for_Texture_based_product
 
-![UMSFAM_1](Anomaly_detection_for_Texture_based_product/src/img/UMSFAM_1.jpg)
-![MFCSAM_1](Anomaly_detection_for_Texture_based_product/src/img/MFCSAM_1.jpg)
+![UMSFAM_1](https://github.com/YShaoJiang/Anomaly_detection_for_Texture_based_product/src/img/UMSFAM_1.jpg)
+![MFCSAM_1](https://github.com/YShaoJiang/Anomaly_detection_for_Texture_based_product/src/img/MFCSAM_1.jpg)
 
 仓库为文章的模块代码，包括UMSFAM以及其他的src文件夹中的组成模块。
 使用时，需要将代码加入使用的backbone网络中，并将网络的输出特征加入代码。
