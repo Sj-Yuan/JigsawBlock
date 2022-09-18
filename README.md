@@ -6,7 +6,7 @@
 使用时，需要将代码加入使用的backbone网络中，并将网络的输出特征加入代码。
 
 除了代码以外，我们提供了MTL AD Dataset的地址：
-xxxxxxxxxxx
+[MTL AD]https://drive.google.com/drive/folders/1PdEcDyFPb3d7yb5uQCOrbi3fs3PyoilG
 
 代码效果分别在MVTec AD dataset以及MTL AD Dataset中的Texture-based类别上进行测试，
 # 测试结果
