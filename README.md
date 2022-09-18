@@ -1,4 +1,4 @@
-# Anomaly_detection_for_Texture_based_product
+# Jigano Attention Block for Anomaly Detection
 
 ![UMSFAM_2](https://github.com/YShaoJiang/Anomaly_detection_for_Texture_based_product/blob/main/src/img/UMSFAM_2.jpg)
 
