@@ -12,7 +12,7 @@ The code effect is tested on MVTec AD dataset and MTL AD Dataset respectively.
 
 CFA
 
-| class      | CFA           | CFA+JAAB         |
+| class      | CFA           | Ours         |
 | ---------- | ------------- | ---------------- |
 | carpet     | **99.5**/98.7 | 99.4/**99.0**    |
 | grid       | 99.2/97.8     | **99.9/97.8**    |
