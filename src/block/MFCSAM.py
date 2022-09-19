@@ -6,9 +6,6 @@ import torch.nn.functional as F
 from atten.fca import MultiSpectralAttentionLayer
 from .SE_weight_module import SEWeightModule
 
-
-# 单头自注意力（包含dct部分）:先对Input做MSA，然后再用sa的q,k,v卷积,跑tile很好
-
 def conv(in_planes, out_planes, kernel_size=3, stride=1, padding=1, dilation=1, groups=1):
     """standard convolution with padding"""
     return nn.Conv2d(in_planes, out_planes, kernel_size=kernel_size, stride=stride,
@@ -23,10 +20,7 @@ class mfcsa_module_layer_2(nn.Module):
                             stride=stride, groups=conv_groups[0])
         self.conv_2 = conv(inplans, planes//2, kernel_size=conv_kernels[1], padding=conv_kernels[1]//2,
                             stride=stride, groups=conv_groups[1])
-        # self.conv_3 = conv(inplans, planes//4, kernel_size=conv_kernels[2], padding=conv_kernels[2]//2,
-        #                     stride=stride, groups=conv_groups[2])
-        # self.conv_4 = conv(inplans, planes//4, kernel_size=conv_kernels[3], padding=conv_kernels[3]//2,
-        #                     stride=stride, groups=conv_groups[3])
+
         self.att_MSA = MultiSpectralAttentionLayer(inplans//2, c2wh[planes//2], c2wh[planes//2],
                                                    reduction=16,
                                                    freq_sel_method='top16')
@@ -39,17 +33,12 @@ class mfcsa_module_layer_2(nn.Module):
         batch_size = x.shape[0]
         x1 = self.conv_1(x)
         x2 = self.conv_2(x)
-        # x3 = self.conv_3(x)
-        # x4 = self.conv_4(x)
 
         feats = torch.cat((x1, x2), dim=1)
         feats = feats.view(batch_size, 2, self.split_channel, feats.shape[2], feats.shape[3])
-        # 求每个scale的channel_atten
+
         x1_msa = self.selfatten(x1)
         x2_msa = self.selfatten(x2)
-        # x3_msa = self.selfatten(x3)
-        # x4_msa = self.selfatten(x4)
-        # x_se=[4,256,64,64], x1_msa=[4,64,64,64],x2_msa=[4,64,64,64]
 
         x_msa = torch.cat((x1_msa, x2_msa), dim=1)
         attention_vectors = x_msa.view(batch_size, 2, self.split_channel, x_msa.shape[2], x_msa.shape[3])
@@ -102,7 +91,6 @@ class mfcsa_module_layer_4(nn.Module):
         x2_msa = self.selfatten(x2)
         x3_msa = self.selfatten(x3)
         x4_msa = self.selfatten(x4)
-        # x_se=[4,256,64,64], x1_msa=[4,64,64,64],x2_msa=[4,64,64,64]
 
         x_msa = torch.cat((x1_msa, x2_msa, x3_msa, x4_msa), dim=1)
         attention_vectors = x_msa.view(batch_size, 4, self.split_channel, x_msa.shape[2], x_msa.shape[3])
