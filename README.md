@@ -2,27 +2,36 @@
 
 ![jigano](https://github.com/YShaoJiang/JiganoAttentionBlock/blob/main/src/img/jig_anomaly.jpg)
 
-仓库为文章的模块代码，包括UMSFAM以及其他的src文件夹中的组成模块。
-使用时，需要将代码加入使用的backbone网络中，并将网络的输出特征加入代码。
+The repository is the code of article, including PFAM and other components in the src folder. When using it, you need to add the code to the backbone network.
 
-除了代码以外，我们提供了[MTL AD Dataset](https://drive.google.com/drive/folders/1PdEcDyFPb3d7yb5uQCOrbi3fs3PyoilG)的地址。
-代码效果分别在MVTec AD dataset以及MTL AD Dataset上进行测试，
-# 测试结果
+In addition to the code, we provide the address of the[MTL AD Dataset](https://drive.google.com/drive/folders/1PdEcDyFPb3d7yb5uQCOrbi3fs3PyoilG).
+The code effect is tested on MVTec AD dataset and MTL AD Dataset respectively.
+# Result
 
 ## MVTec AD
 
-检测结果——CFA
+CFA
 
-| class   | CFA         | CFA_MFCSAM_layer4 | CFA_UMSFAM          |
-| ------- | ----------- | ----------------- | ------------------- |
-| carpet  | 99.5/98.7   | 99/99.1           | **99.5**/99.1       |
-| grid    | 99.2/97.8   | 99.6/98.5         | **99.6**/**98.6**   |
-| leather | 100/99.1    | 100/99.4          | 100/**99.5**        |
-| tile    | 99.4/95.8   | 100/96.4          | **100**/**97.1**    |
-| wood    | 99.7/94.8   | 99.4/95.8         | **100**/**96.4**    |
-| avg.    | 99.56/97.24 | 99.6/97.84        | **99.82**/**98.14** |
+| class      | CFA           | CFA+JAAB         |
+| ---------- | ------------- | ---------------- |
+| carpet     | **99.5**/98.7 | 99.4/**99.0**    |
+| grid       | 99.2/97.8     | **99.9/97.8**    |
+| leather    | 100/99.1      | 100/**99.5**     |
+| tile       | 99.4/95.8     | **100**/**96.1** |
+| wood       | 99.7/94.8     | **100**/94.8     |
+| bottle     | 100/98.6      | 100/98.6         |
+| cable      | 99.8/**98.7** | **99.9**/98.6    |
+| capsule    | 97.3/98.9     | **98.2**/98.9    |
+| hazelnut   | 100/98.6      | 100/98.6         |
+| metal_nut  | **100/98.8**  | 99.6/98.7        |
+| pill       | 97.9/**98.6** | **98.7**/98.2    |
+| screw      | 97.3/**99.0** | 97.3/98.9        |
+| toothbrush | **100**/98.8  | 99.7/**98.9**    |
+| transistor | 100/98.3      | 100/**98.4**     |
+| zipper     | 99.6/98.6     | **99.7/98.8**    |
+| avg.       | 99.3/98.2     | **99.5/98.25**   |
 
-检测结果——Patchcore
+PatchCore
 
 | class   | Patchcore    | Patchcore_MFCSAM_layer4 | Patchcore_UMSFAM |
 | ------- | ------------ | ----------------------- | ---------------- |
@@ -35,7 +44,7 @@
 
 ## MTL AD
 
-检测结果——CFA
+CFA
 
 | class     | CFA           | CFA_MFCSAM_layer4 | CFA_UMSFAM        |
 | --------- | ------------- | ----------------- | ----------------- |
@@ -44,7 +53,7 @@
 | pearlfish | 79.5/91.3     | 79.2/90.7         | **82.8**/**91.8** |
 | avg.      | 86.16/90.63   | 86.7/89.8         | **89.86**/**91**  |
 
-检测结果——Patchcore
+PatchCore
 
 | class     | Patchcore     | Patchcore_MFCSAM_layer4 | Patchcore_UMSFAM |
 | --------- | ------------- | ----------------------- | ---------------- |
