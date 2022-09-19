@@ -4,7 +4,7 @@
 
 The repository is the code of article, including PFAM and other components in the src folder. When using it, you need to add the code to the backbone network.
 
-In addition to the code, we provide the address of the[MTL AD Dataset](https://drive.google.com/drive/folders/1PdEcDyFPb3d7yb5uQCOrbi3fs3PyoilG).
+In addition to the code, we provide the address of the [MTL AD Dataset](https://drive.google.com/drive/folders/1PdEcDyFPb3d7yb5uQCOrbi3fs3PyoilG).
 The code effect is tested on MVTec AD dataset and MTL AD Dataset respectively.
 # Result
 
@@ -33,20 +33,30 @@ CFA
 
 PatchCore
 
-| class   | Patchcore    | Patchcore_MFCSAM_layer4 | Patchcore_UMSFAM |
-| ------- | ------------ | ----------------------- | ---------------- |
-| carpet  | 97.8/98.8    | 99.1/98.8               | **99.2**/98.7    |
-| grid    | 96.4/96.8    | 97.7/**98.3**           | 98/97.6          |
-| leather | 100/**99.5** | 100/99.1                | 100/99           |
-| tile    | 100/**96**   | 100/95.7                | 100/95.4         |
-| wood    | 99.2/93.3    | **99.5**/93.8           | 99.2/**95.1**    |
-| avg.    | 98.68/96.88  | 99.26/**97.16**         | **99.28**/97.14  |
+| class      | PatchCore           | Ours         |
+| ---------- | ------------- | ---------------- |
+| carpet     | 98.4/98.8**** | **99.2**/98.7 |
+| grid       | 95.9/96.8     | **98/97.6** |
+| leather    | 100/**99.1**  | 100/99 |
+| tile       | 100/**96.1** | 100/95.4 |
+| wood       | 98.9/93.4     | **99.2/95.1** |
+| bottle     | 100/98.4      | 100/**98.8** |
+| cable      | 99.0/98.8**** | **99.2/**98.7 |
+| capsule    | **98.2**/98.8 | 97.4/**99.2** |
+| hazelnut   | 100/98.7      | 100/**98.9** |
+| metal_nut  | **99.4**/98.9 | 98.6/**99.3** |
+| pill       | 92.4/98**** | **92.5**/97 |
+| screw      | 96/98.9 | **96.2/99.5** |
+| toothbrush | 93.3/98.8  | **100/99** |
+| transistor | 100/98.1      | 97.3/97.8 |
+| zipper     | **98.2**/98.3 | **96.4/99** |
+| avg.       | 98/98 | **98.27/98.2** |
 
 ## MTL AD
 
 CFA
 
-| class     | CFA           | CFA_MFCSAM_layer4 | CFA_UMSFAM        |
+| class     | CFA           | CFA_MFCSAM_layer4 | CFA_PFAM        |
 | --------- | ------------- | ----------------- | ----------------- |
 | ostrich   | 91.3/**86.7** | 91.8/85.5         | **93.2**/86.4     |
 | lychee    | 87.7/93.9     | 89.1/93.2         | **93.6**/**94.8** |
@@ -55,7 +65,7 @@ CFA
 
 PatchCore
 
-| class     | Patchcore     | Patchcore_MFCSAM_layer4 | Patchcore_UMSFAM |
+| class     | Patchcore     | Patchcore_MFCSAM_layer4 | Patchcore_PFAM |
 | --------- | ------------- | ----------------------- | ---------------- |
 | ostrich   | 84.8/82.3     | 86.3/80.8               | **86.9**/80.8    |
 | lychee    | **75.2**/89.4 | 73.5/89.8               | 73.9/**89.9**    |
