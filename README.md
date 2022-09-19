@@ -1,4 +1,4 @@
-# Jigano Attention Block for Anomaly Detection
+# Jigsaw Block for Anomaly Detection of Industrial Products Considering both Texture and Shape Information
 
 ![jigano](https://github.com/YShaoJiang/JiganoAttentionBlock/blob/main/src/img/jig_anomaly.jpg)
 
