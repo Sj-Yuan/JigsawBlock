@@ -1,4 +1,4 @@
-# UMSFAM: unbiased_multi_scale_feature_aggregate_module
+# PFAM: Pretrained_Feature_Attention_Module
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
