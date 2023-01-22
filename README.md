@@ -72,7 +72,7 @@ PatchCore
 | pearlfish | 75.3/87.5     | 80.6/**91**             | **81.2**/90.9    |
 | avg.      | 78.4/86.4     | 79.7/87.2               | **80.6**/87.2    |
 
-# 测试过程——CFA
+# Testing——CFA
 ## MVTec AD
 ![mvtec_result_shape](https://github.com/YShaoJiang/Anomaly_detection_for_Texture_based_product/blob/main/src/img/mvtec_shape_result.jpg)
 ![mvtec_result_shape_2](https://github.com/YShaoJiang/Anomaly_detection_for_Texture_based_product/blob/main/src/img/mvtec_shape_result_2.jpg)
