@@ -74,9 +74,9 @@ PatchCore
 
 # Testing——CFA
 ## MVTec AD
-![mvtec_result_shape](https://github.com/YShaoJiang/Anomaly_detection_for_Texture_based_product/blob/main/src/img/mvtec_shape_result.jpg)
-![mvtec_result_shape_2](https://github.com/YShaoJiang/Anomaly_detection_for_Texture_based_product/blob/main/src/img/mvtec_shape_result_2.jpg)
-![mvtec_result](https://github.com/YShaoJiang/Anomaly_detection_for_Texture_based_product/blob/main/src/img/mvtec_result.jpg)
+![mvtec_result_shape](https://github.com/DiagoAlaraviz/JigsawBlock/blob/main/src/img/mvtec_shape_result.jpg)
+![mvtec_result_shape_2](https://github.com/DiagoAlaraviz/JigsawBlock/blob/main/src/img/mvtec_shape_result_2.jpg)
+![mvtec_result](https://github.com/DiagoAlaraviz/JigsawBlock/blob/main/src/img/mvtec_result.jpg)
 
 ## MTL AD
-![mtl_result](https://github.com/YShaoJiang/Anomaly_detection_for_Texture_based_product/blob/main/src/img/mtl_result.jpg)
+![mtl_result](https://github.com/DiagoAlaraviz/JigsawBlock/blob/main/src/img/mtl_result.jpg)
