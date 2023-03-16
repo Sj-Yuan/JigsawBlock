@@ -1,6 +1,6 @@
 # Anomaly Detection of Industrial Products Considering both Texture and Shape Information
 
-![jigano](https://github.com/YShaoJiang/JiganoAttentionBlock/blob/main/src/img/jig_anomaly.jpg)
+![jigano](https://github.com/DiagoAlaraviz/JigsawBlock/blob/main/src/img/model_3.png)
 
 The repository is the code of article, including PFAM and other components in the src folder. When using it, you need to add the code to the backbone network.
 
